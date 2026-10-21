@@ -130,6 +130,9 @@ app.use((err, req, res, next) => {
 });
 // use to handle err if wrong type of data is store in create route
 
+ app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 app.listen(8080, () => {
     console.log("server is listening on port 8080 ");
 });
