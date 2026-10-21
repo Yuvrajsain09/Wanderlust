@@ -119,6 +119,11 @@ app.use((req, res, next) => {
 app.use("/listings", listingsrouter);
 app.use("/listings/:id/reviews", reviewsrouter); 
 app.use("/", userrouter); // this will handle all the routes related to user like register, login, logout etc
+
+app.get("/", (req, res) => {
+   res.redirect("/listings");
+});
+
 // if page not found
 app.all("/{*splat}", (req, res, next) => {
     next(new ExpressError(404, "Page not found"));
@@ -130,10 +135,7 @@ app.use((err, req, res, next) => {
 });
 // use to handle err if wrong type of data is store in create route
 
- app.get("/", (req, res) => {
-    res.redirect("/listings");
-});
-app.listen(8080, () => {
+ app.listen(8080, () => {
     console.log("server is listening on port 8080 ");
 });
 
