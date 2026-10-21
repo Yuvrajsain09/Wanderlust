@@ -1,0 +1,81 @@
+Notes: What is State?
+🔹 Stateful Protocol
+Server remembers session & status of each client.
+
+Requires storage of connection info on server side.
+
+Example: FTP (File Transfer Protocol)
+
+When you log in, the server keeps track of your session until you disconnect.
+
+🔹 Stateless Protocol
+Server does not retain session info between requests.
+
+Each request is independent and treated as new.
+
+Example: HTTP (Hypertext Transfer Protocol)
+
+Every request (like loading a webpage) is processed without memory of previous requests.
+
+✨ Key Difference
+Stateful: Server maintains memory of client → continuous interaction.
+
+Stateless: No memory → each request is standalone.
+
+👉 Quick way to remember:
+
+Stateful = Server remembers you
+
+Stateless = Server forgets you every time
+
+Express session is an attempt to make our session stateful jo bhi hmare website pr user aate hain aur if they do,not login if they add any itm without login then this data is stored by our express session
+the data store is temporary and it sent the session id to frontend and then front end send the session id to the backend
+
+
+connect-flash
+What is Flash?
+Flash is a special area inside a session.
+
+It is used for storing temporary messages.
+
+Messages are written to flash and then cleared automatically after being shown to the user.
+
+🔹 Purpose
+Helps in showing alerts, notifications, or success/error messages.
+
+Commonly used in web apps with Express.js.
+
+Example: After login failure → flash stores "Invalid password" → displayed once → then removed.
+
+🔹 Workflow
+User performs an action (e.g., login, form submit).
+
+Server writes a message into flash.
+
+Message is displayed on the next page render.
+
+Flash clears the message after display.
+
+🔹 Keywords
+Session-based temporary storage
+
+Alerts / Notifications
+
+Auto-clear after display
+
+👉 Easy memory trick:
+
+Flash = One‑time message box inside your session.
+
+🔹 Concept
+Flash = special area inside a session.
+
+Used for storing temporary messages.
+
+in mongo db we see the 2 problems to upload the image
+
+    1st is send files and 2nd is size limit of BSON
+
+    to solve this we make form capable to send files and then save the file in 3rd party service like aws , cloud , azure and more etc and once it save the file it gives us link for the 
+
+    then we save the link in mongo db databses

@@ -1,0 +1,205 @@
+ body {
+     font-family: "Plus Jakarta Sans", sans-serif !important;
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+ }
+
+ .container {
+     flex: 1;
+ }
+
+ .navbar {
+     height: 5rem;
+     background-color: white;
+ }
+
+ .fa-compass {
+     color: #fe424d;
+     font-size: 2rem;
+ }
+
+ .nav-link {
+     color: #222222 !important;
+     /*used to override bootstrap's default color */
+
+ }
+
+ .f-info-links a {
+     text-decoration: none;
+     color: #222222;
+
+ }
+
+ .f-info-links a:hover {
+     text-decoration: underline;
+ }
+
+ .f-info-links,
+ .f-info-socials,
+ .f-info-brands {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .f-info-socials {
+
+     font-size: 1.2rem;
+     margin-right: 1rem;
+ }
+
+
+
+ .f-info {
+     text-align: center;
+     height: 8rem;
+     background-color: #ebebeb;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: space-evenly;
+ }
+
+ /*Card */
+ .listing-card {
+     border: none;
+     margin-bottom: 2rem;
+
+ }
+
+ .card-img-top {
+     border-radius: 1rem !important;
+     width: 100% !important;
+
+ }
+
+ .card-body {
+     padding: 0 !important;
+
+ }
+
+ .card-text p {
+     font-weight: 400 !important;
+ }
+
+ .listing-link {
+     text-decoration: none;
+
+ }
+
+ .card-img-overlay {
+     opacity: 0;
+ }
+
+ /*Card effect*/
+ .card-img-overlay:hover {
+     opacity: 0.2;
+     background-color: white;
+
+ }
+
+ /*New btn*/
+ .add-btn {
+     background-color: #fe424d !important;
+     border: none !important;
+ }
+
+ /*Edit btn*/
+ .edit-btn {
+     background-color: #fe424d !important;
+     border: none !important;
+ }
+
+ /* show page  */
+ .show-img {
+
+     height: 30vh;
+
+
+ }
+
+ .btns {
+     display: flex;
+ }
+
+ .show-card {
+
+     padding-right: 0;
+     padding-left: 0;
+ }
+
+
+ /*Map*/
+
+ #map {
+     height: 400px;
+     width: 80vh;
+
+ }
+
+ /* Outer marker - DO NOT add transform here, GL JS controls it */
+.airbnb-marker {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Inner div gets the pin shape and rotation */
+.airbnb-marker-inner {
+    background-color: black;
+    border-radius: 50% 50% 50% 0;
+    width: 35px;
+    height: 35px;
+    transform: rotate(-45deg); /* pin shape rotation */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.airbnb-marker:hover .airbnb-marker-inner {
+    background-color: #FF385C;
+}
+
+.icon-wrapper {
+    transform: rotate(45deg); /* counter-rotate to straighten icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Both icons stacked on top of each other */
+.airbnb-marker .home-icon,
+.airbnb-marker .compass-icon {
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+/* Home icon - fully visible by default */
+.airbnb-marker .home-icon {
+    opacity: 1;
+}
+
+/* Compass icon - hidden by default */
+.airbnb-marker .compass-icon {
+    opacity: 0;
+}
+
+/* On hover - home icon fades out */
+.airbnb-marker:hover .home-icon {
+    opacity: 0;
+}
+
+/* On hover - compass icon fades in */
+.airbnb-marker:hover .compass-icon {
+    opacity: 1;
+}
